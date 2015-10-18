@@ -1,3 +1,7 @@
-app.controller('bookController', ['$scope', '$routeParams', function ($scope, $routeParams) {
-	$scope.isbn = $routeParams.isbn;
+app.controller('bookController', ['$scope', '$routeParams', 'bookSearchService', function ($scope, $routeParams, bookSearchService) {
+	var isbn = $routeParams.isbn;
+	bookSearch = bookSearchService.searchBook;
+	bookSearch(isbn, function (response) {
+		console.log(response);
+	});
 }]);

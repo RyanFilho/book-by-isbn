@@ -1,6 +1,7 @@
 var app = angular
 	.module('bookbyisbn', [
-		'ngRoute'
+		'ngRoute',
+		'ngResource'
 		]);
 
 // Definindo Rotas
