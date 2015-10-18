@@ -5,7 +5,7 @@
 	<div class="panel panel-default">
 	  <div class="panel-heading">
 		<div class="page-header">
-		  <h1>Example page header <small>{{isbn}}</small></h1>
+		  <h1>{{book.title}} <small>{{book.industryIdentifiers[0] + ' - ' + book.industryIdentifiers[1]}}</small></h1>
 		</div>
 	  </div>
 	  <div class="panel-body">
@@ -17,18 +17,17 @@
 			    </a>
 			  </div>
 			  <h2>Autor</h2>
+			  <h3>{{book.authors}}</h3>
 			  <h2>Editora</h2>
+			  <h3>Não implementado</h3>
 			  <h2>Paginas</h2>
+			  <h3>{{book.pageCount}}</h3>
 			  <h2>Categorias</h2>
+			  <h3>Não Implementado</h3>
 			</div>
 			<div class="row">
 				<h2>Descrição</h2>
-				<h3>
-					bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-					bla bla bla bla bla bla bla bla bla bla
-					bla bla bla bla bla bla bla bla 
-					bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-				</h3>
+				<h3>{{book.description}}</h3>
 			</div>
 		</div>
 	  </div>
