@@ -4,12 +4,15 @@
 			<h1>Book by ISBN</h1>
 		</header>	
 		<article>				
-			<div class="input-group input-group-lg">
-				<input class="form-control" type="text" placeholder="ISBN 10 ou 13">
-				<span class="input-group-btn">
-	        		<button class="btn btn-personalizado" type="button">Search</button>
-	      		</span>
-			</div>
+		    <div class="input-group">
+		      <input ng-model="input"type="text" class="form-control" placeholder="Search for 8571644756 ...">
+		      <span class="input-group-btn">
+		      	<a href="#/book/{{input}}">
+		      		<button class="btn btn-default" type="button">Search</button>
+		      	</a>	        
+		      </span>
+		    </div>
 		</article>
+
 	</section>
 </div>

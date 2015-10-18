@@ -4,7 +4,11 @@ app.factory('bookSearchService', ['googleBookSearchService', function (googleBoo
 
 	var _searchBook = function (isbn, callback) {
 		googleBookSearch(isbn, function (response) {
-			callback(response.items[0].volumeInfo);
+			if (response.totalItems) {
+				callback(response.items[0].volumeInfo);
+			}else {
+				callback(null);
+			};			
 		});	
 	};
 

@@ -8,7 +8,6 @@ var app = angular
 app.config(function($routeProvider) {
 	$routeProvider
 		.when('/', {
-			controller: 'homeController'
 			templateUrl: 'html/views/home.html'
 		})
 		.when('/book/:isbn', {
