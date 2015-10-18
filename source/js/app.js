@@ -8,11 +8,12 @@ var app = angular
 app.config(function($routeProvider) {
 	$routeProvider
 		.when('/', {
-			templateUrl: "html/views/home.html"
+			controller: 'homeController'
+			templateUrl: 'html/views/home.html'
 		})
-		.when("/book/:isbn", {
-			controller: "bookController",
-			templateUrl: "html/views/book.html"
+		.when('/book/:isbn', {
+			controller: 'bookController',
+			templateUrl: 'html/views/book.html'
 		})
 		.otherwise({redirectTo: '/'});
 });

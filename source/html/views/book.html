@@ -13,17 +13,15 @@
 		    <div class="row">
 			  <div class="col-xs-6 col-md-3 col-lg-3">
 			    <a href="#" class="thumbnail">
-			      <img src="http://www.cnea.com.br/wp-content/uploads/2013/03/Capa-do-livro-II-CNEA.png" alt="">
+			      <img ng-src="{{book.imageLink}}" alt="">
 			    </a>
 			  </div>
 			  <h2>Autor</h2>
 			  <h3>{{book.authors}}</h3>
-			  <h2>Editora</h2>
-			  <h3>Não implementado</h3>
 			  <h2>Paginas</h2>
 			  <h3>{{book.pageCount}}</h3>
 			  <h2>Categorias</h2>
-			  <h3>Não Implementado</h3>
+			  <h3>{{book.categories}}</h3>
 			</div>
 			<div class="row">
 				<h2>Descrição</h2>
