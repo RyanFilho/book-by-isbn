@@ -1,7 +1,8 @@
-# Livro Por ISBN
+# Book by ISBN
 
 Continous Deployment on bookbyisbn.azurewebsites.net 
 
-Aplicação para pesquisar livros por ISBN nas web APIs :
+Angularjs application to look for books by ISBN on public APIs:
+
 - Google Books API
 - Open Library ( Em Breve )
