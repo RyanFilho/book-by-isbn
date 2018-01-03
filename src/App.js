@@ -1,25 +1,16 @@
-import React, { Component } from 'react';
-import {Form, FormGroup, FormControl, ControlLabel, Button, PageHeader} from 'react-bootstrap';
+import React, { Component } from 'react'
+import { PageHeader } from 'react-bootstrap'
+import Searcher from './Searcher.js'
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
+      <div className='App'>
         <PageHeader>Book by ISBN <small>Search book information by ISBN code.</small></PageHeader>
-        <Form inline>
-          <FormGroup controlId="formInlineName">
-            <ControlLabel>ISBN</ControlLabel>
-            {' '}
-            <FormControl type="text" placeholder="ISBN code" />
-          </FormGroup>
-            {' '}
-          <Button type="submit">
-            Search Book
-          </Button>
-        </Form>
+        <Searcher />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
