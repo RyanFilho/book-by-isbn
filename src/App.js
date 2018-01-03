@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Form, FormGroup, FormControl, ControlLabel, Button, PageHeader} from 'react-bootstrap';
-import './App.css';
 
 class App extends Component {
   render() {
@@ -13,7 +12,7 @@ class App extends Component {
             {' '}
             <FormControl type="text" placeholder="ISBN code" />
           </FormGroup>
-          {' '}
+            {' '}
           <Button type="submit">
             Search Book
           </Button>
