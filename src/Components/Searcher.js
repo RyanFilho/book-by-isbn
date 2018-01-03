@@ -17,7 +17,8 @@ class Searcher extends React.Component {
           var book = results.items[0]["volumeInfo"];
           console.log(book);
           // Send do parent component
-          //this.props.onSubmit(resp.data);        
+          //this.props.onSubmit(resp.data);   
+               
         }
       });
   }
