@@ -9,16 +9,17 @@ class Searcher extends React.Component {
   	event.preventDefault();
     axios.get(`https://www.googleapis.com/books/v1/volumes?q=isbn:${this.state.isbnCode}`)
     	.then(results => {
-        console.log(results)
         this.setState({ isbnCode: ''});
-        if (results.totalItems) {
+        if (results.data.totalItems) {
           
           // There'll be only 1 book per ISBN
-          var book = results.items[0]["volumeInfo"];
-          console.log(book);
-          // Send do parent component
-          //this.props.onSubmit(resp.data);   
-               
+          var book = results.data.items[0]["volumeInfo"];
+
+          // Send book details to parent component
+          this.props.onSubmit(book);              
+        } else {
+          // Send nothing to parent component
+          this.props.onSubmit(null);              
         }
       });
   }
