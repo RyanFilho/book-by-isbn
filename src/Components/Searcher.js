@@ -1,25 +1,23 @@
 import React from 'react'
 import {Form, FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap'
-import axios from 'axios'
 
 class Searcher extends React.Component {
   state = { isbnCode: '' }
   handleSubmit  = (event) => {
     console.log(this.state.isbnCode);
   	event.preventDefault();
-    axios.get(`https://www.googleapis.com/books/v1/volumes?q=isbn:${this.state.isbnCode}`)
+    fetch(`https://www.googleapis.com/books/v1/volumes?q=isbn:${this.state.isbnCode}`)
     	.then(results => {
+        console.log(results)
         this.setState({ isbnCode: ''});
-        if (results.data.totalItems) {
+        if (results.totalItems) {
           
           // There'll be only 1 book per ISBN
-          var book = results.data.items[0]["volumeInfo"];
-
-          // Send book details to parent component
-          this.props.onSubmit(book);              
-        } else {
-          // Send nothing to parent component
-          this.props.onSubmit(null);              
+          var book = results.items[0]["volumeInfo"];
+          console.log(book);
+          // Send do parent component
+          //this.props.onSubmit(resp.data);   
+                 
         }
       });
   }
