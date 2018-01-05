@@ -13,6 +13,7 @@ class App extends Component {
       <div className='App'>
         <PageHeader>Book by ISBN <small>Search book information by an ISBN code.</small></PageHeader>
         <Searcher onSubmit={this.handleSubmit} />
+        <br/>
         <BookInfo book={this.state.book} />
       </div>
     )

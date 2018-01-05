@@ -1,5 +1,6 @@
 import React from 'react'
 import {Form, FormGroup, FormControl, ControlLabel, Button} from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 import axios from 'axios'
 
 class Searcher extends React.Component {
@@ -26,23 +27,29 @@ class Searcher extends React.Component {
 
   render(){
     return (
-      <Form inline onSubmit={this.handleSubmit}>
-        <FormGroup controlId='formInlineName'>
-          <ControlLabel>ISBN</ControlLabel>
-          {' '}
-          <FormControl 
-            type='text' 
-            placeholder='ISBN code' 
-            value={this.state.isbnCode}
-            onChange = {(event) => this.setState({isbnCode: event.target.value})}
-            required
-          />
-        </FormGroup>
-        {' '}
-        <Button type='submit'>
-            Search Book
-        </Button>
-      </Form>
+      <Grid>
+        <Row>
+          <Col md={12}>
+            <Form inline onSubmit={this.handleSubmit}>
+              <FormGroup controlId='formInlineName'>
+                <ControlLabel>ISBN</ControlLabel>
+                {' '}
+                <FormControl 
+                  type='text' 
+                  placeholder='ISBN code' 
+                  value={this.state.isbnCode}
+                  onChange = {(event) => this.setState({isbnCode: event.target.value})}
+                  required
+                />
+              </FormGroup>
+              {' '}
+              <Button type='submit'>
+                  Search Book
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+      </Grid>
     )
   }
 }
