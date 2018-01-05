@@ -1,17 +1,19 @@
 import React from 'react'
-//import { PageHeader } from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 const BookInfo = (props) => {
   if(props.book){
     return (
-      <div> 
-        <p>{JSON.stringify(props.book)}</p>
-      </div> 
+      <Grid>
+        <Col>
+        </Col>
+      </Grid>
     )
   }else {
     return (
       <div> 
-        <p>Not found.</p>
+        <br/>
+        <h3>Waiting a ISBN valid ...</h3>
       </div> 
     )
   }
