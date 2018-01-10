@@ -1,5 +1,36 @@
+html,body {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 body {
-  margin: 5% 10%;
-  padding: 0;
-  font-family: sans-serif;
+  background: url('imagem.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header{
+  color: #fff;
+  text-align: center;
+  font-size: 6em;
+  font-weight: 800;
+}
+.busca-text {
+  background-color: rgba(255, 255, 255, 0.8)
+}
+
+.descricao-livro {
+  transition: height 3s ease 0.3s;
+  height: 0px;
+  margin: 10px;
+  background: #fff;
 }
