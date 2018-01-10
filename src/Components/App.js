@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { PageHeader } from 'react-bootstrap'
-import Searcher from './Searcher.js'
-import BookInfo from './BookInfo.js'
+import { Grid, Row, Col, FormControl, InputGroup, Button} from 'react-bootstrap'
 
 class App extends Component {
   state = { book: null }
@@ -10,14 +8,34 @@ class App extends Component {
   }
   render () {
     return (
-      <div className='App'>
-        <PageHeader>Book by ISBN <small>Search book information by an ISBN code.</small></PageHeader>
-        <Searcher onSubmit={this.handleSubmit} />
-        <br/>
-        <BookInfo book={this.state.book} />
-      </div>
+      <Grid>
+        <Row className="show-grid">
+          <Col sm={12} md={12} lg={12}>
+            <h1 className="header">ISBN Book</h1>
+          </Col>
+        </Row>
+        <Row className="show-grid">
+          <Col sm={12} md={12} lg={12}>
+            <InputGroup bsSize="lg">
+              <FormControl type="text" placeholder="Digite o ISBN..." className="busca-text"/>
+              <InputGroup.Button>
+                <Button bsStyle="primary">Buscar</Button>
+              </InputGroup.Button>
+          </InputGroup>
+          </Col>
+        </Row>
+        <Row className="show-grid">
+          <Col sm={12} md={12} lg={12}>
+            
+          </Col>
+        </Row>
+      </Grid>
     )
   }
 }
+
+
+
+  
 
 export default App
