@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { Grid, Row, Col, FormControl, InputGroup, Button} from 'react-bootstrap'
+import Searcher from './Searcher.js'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 class App extends Component {
-  state = { book: null }
-  handleSubmit = (book) => {
-    this.setState({ book: book });
+  state = { book: {} }
+  handleSubmit  = (book) => {
+    this.setState({book:book});
   }
   render () {
     return (
@@ -16,17 +17,12 @@ class App extends Component {
         </Row>
         <Row className="show-grid">
           <Col sm={12} md={12} lg={12}>
-            <InputGroup bsSize="lg">
-              <FormControl type="text" placeholder="Digite o ISBN..." className="busca-text"/>
-              <InputGroup.Button>
-                <Button bsStyle="primary">Buscar</Button>
-              </InputGroup.Button>
-          </InputGroup>
+            <Searcher onSubmit={this.handleSubmit} />
           </Col>
         </Row>
         <Row className="show-grid">
-          <Col sm={12} md={12} lg={12}>
-            
+          <Col sm={12} md={12} lg={12} className="descricao-livro">
+            Dados: {JSON.stringify(this.state.book)}
           </Col>
         </Row>
       </Grid>

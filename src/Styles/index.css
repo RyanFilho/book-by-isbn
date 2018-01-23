@@ -30,7 +30,6 @@ body {
 
 .descricao-livro {
   transition: height 3s ease 0.3s;
-  height: 0px;
   margin: 10px;
   background: #fff;
 }
